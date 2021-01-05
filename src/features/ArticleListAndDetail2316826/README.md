@@ -2,7 +2,7 @@
 
 ## Requirements
 
-This module uses `react-native-maps`.
+This module uses the `react-native-maps` library.
 
 ## Setup
 
