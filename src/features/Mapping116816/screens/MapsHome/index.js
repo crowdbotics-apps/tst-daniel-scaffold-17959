@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Input } from "react-native-ui-kitten";
+import { View, TextInput } from "react-native";
 
 import MapView, { PROVIDER_GOOGLE } from "react-native-maps";
 
@@ -19,15 +19,16 @@ export default class MapsScreen extends Component {
   };
 
   render() {
-    return [
-      <MapView
-        provider={PROVIDER_GOOGLE}
-        style={styles.map}
-        initialRegion={this.region}
-      />,
-
-      <Input style={styles.searchbar} placeholder="Search..." />
-    ];
+    return (
+      <View style={styles.view}>
+        <MapView
+          provider={PROVIDER_GOOGLE}
+          style={styles.map}
+          initialRegion={this.region}
+        />
+        <TextInput style={styles.searchbar} value="Search..." />
+      </View>
+    )
   }
 }
 
