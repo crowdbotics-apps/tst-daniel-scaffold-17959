@@ -3,7 +3,6 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   card: {
     padding: 10,
-    backgroundColor: 'transparent',
   },
   text: {
     fontSize: 28,
@@ -17,6 +16,7 @@ export const styles = StyleSheet.create({
     height: 250,
     width: '100%',
     justifyContent: 'flex-end',
+    backgroundColor: 'lightslategray',
   },
   body: {
     padding: 10,

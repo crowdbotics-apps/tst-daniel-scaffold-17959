@@ -1,25 +1,27 @@
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
-import {createDrawerNavigator} from 'react-navigation-drawer';
+import { createDrawerNavigator } from 'react-navigation-drawer';
 
 import SplashScreen from "../features/SplashScreen";
 import SideMenu from './sideMenu';
 //@BlueprintImportInsertion
 import Mapping116816Navigator from '../features/Mapping116816/navigator';
+import Articles from '../features/ArticleListAndDetail216823/navigator'
 
 /**
  * new navigators can be imported here
  */
 
 const AppNavigator = {
+  Articles: { screen: Articles },
 
-    //@BlueprintNavigationInsertion
-Mapping116816: { screen: Mapping116816Navigator },
+  //@BlueprintNavigationInsertion
+  Mapping116816: { screen: Mapping116816Navigator },
 
-    /** new navigators can be added here */
-    SplashScreen: {
-      screen: SplashScreen
-    }
+  /** new navigators can be added here */
+  SplashScreen: {
+    screen: SplashScreen
+  }
 };
 
 const DrawerAppNavigator = createDrawerNavigator(

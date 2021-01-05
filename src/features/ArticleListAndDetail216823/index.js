@@ -20,7 +20,7 @@ class ArticleList extends Component {
       onPress={() => {
         this.props.navigation.navigate(this.props.detail, { id: item.id })
       }}>
-      <ImageBackground source={item.image} style={styles.image}>
+      <ImageBackground source={{ uri: item.image }} style={styles.image}>
         <View style={styles.card}>
           <Text style={styles.text}>
             {item.title}
