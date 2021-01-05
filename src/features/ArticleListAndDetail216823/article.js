@@ -6,7 +6,7 @@ import { styles } from "./styles";
 function Article(props) {
   return (
     <View>
-      <ImageBackground source={props.article.image} style={styles.image}>
+      <ImageBackground source={{ uri: props.article.image }} style={styles.image}>
         <View style={styles.card}>
           <Text style={styles.text}>
             {props.article.title}
