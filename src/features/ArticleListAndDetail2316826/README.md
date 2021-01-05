@@ -1,5 +1,9 @@
 # Article List and Detail
 
+## Requirements
+
+`react-native-maps`
+
 ## Setup
 
 Open '/src/navigator/mainNavigator.js' and add the the stack navigator defined in 'navigator.js'.

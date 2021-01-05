@@ -20,7 +20,7 @@ export default function reducer(state = initialState, action) {
         api: {
           isFetching: false,
         },
-        articles: [...state.articles, action.response]
+        articles: [...state.articles, ...action.response]
       })
     case types.ARTICLE_LIST_FAILED:
       return Object.assign({}, state, {

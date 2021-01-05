@@ -6,7 +6,7 @@ import { article_list, article_read } from "./services"
 function* article_listWorker(action) {
   try {
     const result = yield call(article_list, action)
-    yield put(actions.article_listSucceeded(result, action))
+    yield put(actions.article_listSucceeded(result.data, action))
   } catch (err) {
     yield put(actions.article_listFailed(err, action))
   }
@@ -19,7 +19,7 @@ function* article_listWatcher() {
 function* article_readWorker(action) {
   try {
     const result = yield call(article_read, action)
-    yield put(actions.article_readSucceeded(result, action))
+    yield put(actions.article_readSucceeded(result.data, action))
   } catch (err) {
     yield put(actions.article_readFailed(err, action))
   }
